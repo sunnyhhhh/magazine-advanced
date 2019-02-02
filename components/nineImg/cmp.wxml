@@ -1,0 +1,28 @@
+<!--components/nineImg/cmp.wxml-->
+<!-- <text>components/nineImg/cmp.wxml</text> -->
+
+<view class="container">
+    <view class="img-container">
+        <image wx:for="{{imgArr}}"
+               src="{{item}}"
+               wx:key="*this"
+               catch:tap="onTap" 
+               data-index="{{index}}"
+               wx:if="{{index < 9}}"
+               class="image">
+        </image>
+        <!-- <image class="image" src="/image/list/article/4.png"></image>
+        <image class="image" src="/image/list/article/5.png"></image>
+        <image class="image" src="/image/list/article/1.png"></image>
+        <image class="image" src="/image/list/article/2.png"></image>
+        <image class="image" src="/image/list/article/8.png"></image>
+        <image class="image" src="/image/list/article/6.png"></image>
+        <image class="image" src="/image/list/article/2.png"></image>
+        <image class="image" src="/image/list/article/3.png"></image> -->
+
+        <text class="img-num" wx:if="{{imgArr.length > 9}}">{{imgArr.length}}</text>
+    </view>
+    <view class="text-container">
+        <text>{{mainTitle}}</text>
+    </view>
+</view>

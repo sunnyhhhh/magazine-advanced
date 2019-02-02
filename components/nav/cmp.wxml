@@ -1,0 +1,15 @@
+<!--components/nav/cmp.wxml-->
+<!-- <text>components/nav/cmp.wxml</text> -->
+<scroll-view class="container" 
+             scroll-x="true"
+             scroll-into-view="{{scrollViewIndex}}"
+             >
+
+    <text class="type {{activeIndex === index ? 'active' : ''}}" 
+          wx:for="{{magazineNavArr}}"
+          catch:tap="onNavTap"
+          data-index="{{index}}"
+          id="{{'magazine' + index}}"
+          wx:key="{{index}}"
+    >{{item}}</text>
+</scroll-view>

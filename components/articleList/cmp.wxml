@@ -1,0 +1,13 @@
+<!--components/articleList/cmp.wxml-->
+<!-- <text>components/articleList/cmp.wxml</text> -->
+
+<view class="container">
+    <s-article  wx:for="{{articleList}}"
+                wx:key="{{artId}}"
+                article-detail="{{item}}"
+                >
+    </s-article>
+    <s-loading hidden="{{!loading}}"></s-loading>
+    <text class="no-more" wx:if="{{noMoreData}}">没有更多了</text>
+</view>
+ 

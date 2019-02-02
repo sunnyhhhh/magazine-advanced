@@ -1,0 +1,36 @@
+<!--pages/catalog/catalog.wxml-->
+<!-- <text>pages/catalog/catalog.wxml</text> -->
+
+<view class="container">
+    <!-- 搜索组件 -->
+    <s-search value="{{searchWord}}"></s-search>
+
+    <!-- 已订阅的标签列表 -->
+    <view class="mark-container">
+
+        <view class="mark-control">
+            <view class="my-magazine">我的杂志</view>
+            <view class="manage-magazine">管理杂志</view>
+        </view>
+
+        <s-tagList tag-list="{{myTagList}}">
+            <s-add slot="before" style="margin-right: 20rpx;" />
+        </s-tagList>
+
+    </view>
+
+    <!-- 标签列表 -->
+    <view>
+        <view class="tag-list-container" wx:for="{{tagInfoList}}" wx:for-item="tagListItem" wx:key="title">
+
+            <view>{{tagListItem.title}} ></view>
+            <view>
+                <view wx:for="{{tagListItem.tagList}}" class="tag" wx:key="tag">
+                    <text class="tag-text"># {{item.tag}}</text>
+                    <!-- <view >订阅</view> -->
+                    <s-subscribe tag="{{item.tag}}" tag-id="{{item.tagId}}" catch:tap="onSubscribeTap" />
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

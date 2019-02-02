@@ -1,0 +1,7 @@
+<!--components/pureText/cmp.wxml-->
+<!-- <text>components/pureText/cmp.wxml</text> -->
+
+<view class="container">
+    <view class="main-title">{{mainTitle}}打开更加换个打死两个还换个</view>
+    <view class="sub-head">{{subHead}}的伽伽读后感的话覅uahdghdajss</view>
+</view>

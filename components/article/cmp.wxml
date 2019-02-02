@@ -1,0 +1,53 @@
+<!--components/article/cmp.wxml-->
+<!-- <text>components/article/cmp.wxml</text> -->
+<view class="container">
+    <view class="mark-container">
+        <image class="avatar" src="/image/avatar.png"></image>
+        <text class="text">neffy等96人马克了</text>
+    </view>
+
+    <view>
+        <s-bigImg wx:if="{{articleDetail.type === 0}}"
+                  img-src="{{articleDetail.imgArray[0]}}"
+                  main-title="{{articleDetail.mainTitle}}"
+        ></s-bigImg>
+
+        <s-pureText wx:elif="{{articleDetail.type === 4}}"
+                    main-title="{{articleDetail.mainTitle}}"
+                    sub-head="{{articleDetail.subHead}}"
+        ></s-pureText>
+
+        <s-imgText wx:elif="{{articleDetail.type === 2}}"
+                   main-title="{{articleDetail.mainTitle}}"
+                   sub-head="{{articleDetail.subHead}}"
+                   img-src="{{articleDetail.imgArray[0]}}"
+        ></s-imgText>
+
+        <s-nineImg wx:elif="{{articleDetail.type === 1}}"
+                   img-arr="{{articleDetail.imgArray}}"
+                   main-title="{{articleDetail.mainTitle}}"
+        ></s-nineImg>
+
+        <s-video wx:elif="{{articleDetail.type === 3}}"
+                 main-title="{{articleDetail.mainTitle}}"
+                 video-src="{{articleDetail.video.src}}"
+                 duration="{{articleDetail.video.duration}}"
+                 poster="{{articleDetail.video.poster}}"
+                 video-id="{{articleDetail.videoId}}"
+        ></s-video>
+    </view>
+
+    <view class="control-container">
+        <view>
+            <s-tag tag="{{articleDetail.tag}}" tag-id="{{articleDetail.tagId}}"></s-tag>
+        </view>
+        <view class="control-box">
+            <s-more class="box" tag="{{articleDetail.tag}}"></s-more>
+            <s-imgBtn open-type="share" class="box img-btn">
+                <image src="/image/mark/relay.png" slot="img"></image>
+            </s-imgBtn>
+            <s-like class="box" like="{{likeStatus}}" catch:like="onLike"></s-like>
+        </view>
+    </view>
+</view>
+

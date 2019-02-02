@@ -1,0 +1,50 @@
+<!-- <s-bigimg img-src="/image/picture.png" main-title="dkjglahdgkhajfkghkjafhg"></s-bigimg>
+
+<s-pureText main-title="的快感康杀敌换个以傻大个四斗柜啊屎骨康"
+            sub-head="打开该划等号的结果回水管绝对是观点"
+></s-pureText>
+
+<s-imgText main-title="多发点干大嘎嘎发给的快感化联合国溜达会罚款是个阿萨德换个卡电视柜考试过"
+           sub-head="撒个发放给奥德赛刚康科技的好几个黄金卡的好尬汇顶科技还是个考好点大客户给卡号的数据库工行卡"
+           img-src="/image/list/article/6.png"
+></s-imgText> -->
+
+<!-- <s-nineImg></s-nineImg> -->
+
+<!-- <s-video video-src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+         poster="https://upfile.asqql.com/2009pasdfasdfic2009s305985-ts/2018-8/20188920595952033.gif"
+         duration="41'"
+         main-title="说了肯德基的大纲"
+         video-id="video201901"
+></s-video>
+
+<s-tag tag="心理" tagId="3"></s-tag>
+
+<s-more tag="新闻"></s-more>
+
+<s-like like="true"></s-like> -->
+
+<!-- <s-article  wx:for="{{articleList}}"
+            wx:key="{{artId}}"
+            article-detail="{{item}}"></s-article> -->
+<s-nav class="nav" catch:nav="onNav"></s-nav>
+
+<view class="loading-box" wx:if="{{isLoading}}">
+    <s-loading class="loading"></s-loading>
+</view>
+
+<s-recommend recommend="{{recommend}}" class="recommend" magazine-id="{{magazineId}}"></s-recommend>
+
+<s-tagList tag-list="{{markList}}">
+    <s-add slot="before" class="add"></s-add>
+    <view class="to-catalog" slot="after" catch:tap="onCatalogTap">•••</view>
+</s-tagList>
+
+<!-- <s-add></s-add> -->
+
+
+
+<s-articleList article-list="{{articleList}}"
+               more="{{getMore}}"  
+></s-articleList>
+
